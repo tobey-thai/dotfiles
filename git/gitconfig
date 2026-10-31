@@ -21,6 +21,11 @@
     m = merge
     o = checkout
     s = status
+    t = status
+    hs = show --stat
+    gs = grep --recurse-submodules
+    gst = grep --recurse-submodules --untracked
+    gni = grep --no-index
 
     amend = "! git commit --amend --date=\"$(date -R)\""
     ba = branch --all
