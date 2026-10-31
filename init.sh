@@ -1,12 +1,12 @@
 #! /bin/bash
 
-ln -s $(pwd)/.gitconfig ~/.gitconfig.local
+ln -s $(pwd)/git/gitconfig ~/.gitconfig.common
 if [ -f ~/.gitconfig ]; then
-  if ! grep -qF "path = ./.gitconfig.local" ~/.gitconfig; then
-    printf '\n[include]\n\tpath = ./.gitconfig.local\n' >> ~.gitconfig
+  if ! grep -qF "path = ./.gitconfig.common" ~/.gitconfig; then
+    printf '\n[include]\n\tpath = ./.gitconfig.common\n' >> ~/.gitconfig
   fi
 else
-  printf '\n[include]\n\tpath = ./.gitconfig.local\n' >> ~.gitconfig
+  printf '\n[include]\n\tpath = ./.gitconfig.common\n' >> ~/.gitconfig
 fi
-ln -s $(pwd)/.vimrc ~/.vimrc
-ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/vim/vimrc ~/.vimrc
+ln -s $(pwd)/tmux/tmux.conf ~/.tmux.conf
