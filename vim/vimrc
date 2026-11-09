@@ -12,7 +12,7 @@ set nu
 set nolist
 
 " Column control
-"set textwidth=80
+set textwidth=80
 set cc=+0
 highlight ColorColumn ctermbg=5
 
@@ -20,21 +20,19 @@ highlight ColorColumn ctermbg=5
 set wrap linebreak
 set breakindent breakindentopt=min:40,shift:2,sbr
 let &showbreak='> '
-set synmaxcol=160
+set synmaxcol=100
 
 set backspace=indent,eol,start
 
 set wildmenu
 set wildmode=list:longest
 
-"set tags+=/home/linux/ieng6/cs120f/t5thai/tags
-
 " autocmd
 au BufRead,BufNewFile *.s
     \ set noexpandtab shiftwidth=8 tabstop=8
 
 au BufRead,BufNewFile *.{c,h,java,hpp,cpp,sh}
-    \ set expandtab tabstop=4 shiftwidth=4
+    \ set expandtab tabstop=2 shiftwidth=2
 
 au BufRead,BufNewFile *.tex set textwidth=0
 
@@ -46,3 +44,6 @@ au BufRead,BufNewFile *.txt nnoremap j gj
 "au BufWritePre *.{c,h,java,hpp,cpp} %s/\s\+$//e
 
 set mouse=
+
+" Optional environment-specific overrides (e.g. from a private config repo)
+if filereadable(expand('~/.vimrc_env')) | source ~/.vimrc_env | endif
