@@ -15,9 +15,8 @@
     d = diff
     f = fetch
     fp = fetch --prune
-    l = log --graph --date-order --name-only
+    l = log --graph --date-order --stat
     l1 = log --graph --oneline --date-order
-    ln = log --graph --oneline --date-order --name-only
     m = merge
     o = checkout
     s = status
