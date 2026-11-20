@@ -13,6 +13,7 @@
     b = branch
     c = commit
     d = diff
+    du = diff @{u}
     f = fetch
     fp = fetch --prune
     l = log --graph --date-order --stat
